@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5301db75a3","applicationID":"79733399","transactionName":"JgtWQENYWgpdRhlHUwIBSxtZWFsD","queueTime":0,"applicationTime":20,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <title>Cisco Executive Conference Center</title>
+    <link rel="stylesheet" media="screen" href="/assets/application-4d85d3377750294157c0d3b7d48ca06daf606f991e81985676b050f800c2e0fc.css" />
+    <script src="/assets/application-0302e7487d6abf66cb02bdb771575f31f6507fed3a2b325c3e252b3592de0d22.js"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Inh3Szid15QQpVIRlRQ7WTSCNM/Vqkd31YOrs+IzKQKFFko7+yvdJ82WUscX1IgJZK3RIiDR3dCbfM/QdNCgVQ==" />
+
+    <script>
+//<![CDATA[
+var AUTH_TOKEN = "dDF18CuZo/LXM2Jaq0OcS3jzcnvkoefLhEzWwibLWOHTX0iA6C+pQQoAYowpgy8bKNyXlhHafWzKs7KhsCjRtg==";
+//]]>
+</script>
+
+    
+  </head>
+  <body class=" admin_user can_edit">
+    <div id="wrap">
+      <header>
+  
+  
+  <div id="flash-header">
+</div>
+
+  <aside id="vhg-header">
+  <h2>VHG Tools</h2>
+  <nav>
+    <ul>
+      <li><a href="/admin/events">Events</a></li>
+      <li><a href="/queue">Nomination Queue</a></li>
+      <li><a href="/review">Review Queue</a></li>
+      <li><a href="/duplicates">Duplicates</a></li>
+      <li><a href="/companies/search/new">Company Search</a></li>
+        <li><a href="/reports"><span class="translation_missing" title="translation missing: en-cisco.reports">Reports</span></a></li>
+      <li><a href="/bulk_edits">Bulk Edits</a></li>
+
+      <li><a href="/admin/users">Users</a></li>
+
+    </ul>
+  </nav>
+</aside>
+
+    <aside class="general-header gdpr-header">
+    <p>
+      <b style="font-weight: bold">GDPR Privacy Notice For All 2019 Invitees:</b><br>
+      Due to the 2018 implementation of the GDPR data protection and privacy law, all approved nominees will be processed in the Global E-mail Management Service (“GEMS”) - an email cleansing database which provides the subscription status indicating whether your customer has opted out of unsolicited emails from Cisco, including the invitation for Executive Symposium.
+    </p>
+    <p>
+      If the approved customer is on the opt-out suppression list, AMs will be the <u>only contact notified</u> via email from Jenny Damitio (jdamitio@cisco.com), providing a copy of the personalized invite to forward on to the customer. You will also see your customer’s profile highlighted in red within the CECC database.
+    </p>
+    <p>
+      For more information regarding GDPR, visit our page <a target="vic-other" href="https://www.cisco.com/c/en/us/about/trust-center/gdpr.html">here</a>.
+    </p>
+    <p>
+      For program and invitation information, visit our Community page <a target="vic-other" href="https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=a3adc064-50b2-4bfa-a7f4-defb88d012d8">here</a>.”
+    </p>
+  </aside>
+
+
+  <div id="site-header">
+    <h1>Cisco Executive Events</h1>
+
+      <nav>
+        <ul>
+            <li><a class="current Hash" href="/">My Accounts</a></li>
+            <li><a href="/help">Help Center</a></li>
+            <li class="highlight"><a href="/people/search/new">Search</a></li>
+            <li><a href="/users/edit">Settings</a></li>
+            <li><a href="/users/sign_out">Logout</a></li>
+        </ul>
+      </nav>
+  </div>
+</header>
+
+      <section id="content"><header class="subhead attached">
+  <h2>Attendee Status</h2>
+  <div class="buttonset">
+    <a class="first last" href="/people/new">Add Nomination</a>
+  </div>
+</header>
+
+<div class="inform">Be sure to validate existing records and/or nominate new customers for the Executive Symposium at Cisco Live 2018 as well as CIO Exchange 2017. <ul><li>To validate, click on the existing customer names to update and/or fill in any incomplete info, then click the Record Validation check box & Save Record.</li><li>To nominate new customers, click on the "Add Nomination" button, and fill in the required info.</li></div>
+
+
+<div class="columnset">
+  <div class="column double-wide">
+    <fieldset id="people-panel" class=" no-padding panel">
+  <legend>
+    
+      People
+    <span class="extra"></span>
+  </legend>
+  <div class="panel-contents contents">
+    <table class="people table 2-events ">
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th class="title">Job Title</th>
+            <th class="employer">Company</th>
+              <th class="event">CIO Exchange 2018 </th>
+              <th class="event">ES@CL 2019</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</fieldset>
+
+</div>
+
+  <div class="inform">
+    <p>
+      You have no records linked to your account.
+      You can <a href="/people/search">search</a>
+      or <a href="/people/new">nominate someone new</a>.
+    </p>
+  </div>
+</section>
+      <footer><h3>Key Contacts</h3><p style='white-space: nowrap;'><br><strong>Executive Symposium:</strong> Jennifer Damitio, <a href='mailto:jdamitio@cisco.com'>jdamitio@cisco.com</a> or +1&nbsp;(800)&nbsp;590-8317<br /><br /><strong>CIO Exchange:</strong> Suzanne O’Leary, <a href='mailto:suzanne@ciscoexecrelations.com'>suzanne@ciscoexecrelations.com</a> or +1&nbsp;(408)&nbsp;853-4831</p></footer>
+
+      <noscript>
+  <div class="full_page overlay">
+    <div class="modal centered">
+      <h2>Javascript Required</h2>
+      <p>Javascript is required to use the Cisco Executive Events portal. Please enable it in your browser and return.</p>
+    </div>
+  </div>
+</noscript>
+    </div>
+  <script async type="text/javascript" id="mini-profiler" src="/mini-profiler-resources/includes.js?v=251162ee7dc30da30d5370581c664510" data-version="251162ee7dc30da30d5370581c664510" data-path="/mini-profiler-resources/" data-current-id="fpk0bfwwntxvaf7anwf9" data-ids="fpk0bfwwntxvaf7anwf9" data-horizontal-position="left" data-vertical-position="top" data-trivial="false" data-children="false" data-max-traces="20" data-controls="false" data-authorized="true" data-toggle-shortcut="Alt+P" data-start-hidden="false" data-collapse-results="true" data-html-container="body"></script>
+</body>
+</html> 
+
